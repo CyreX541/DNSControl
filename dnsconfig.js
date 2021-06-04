@@ -64,8 +64,8 @@ var MAIL01 = [
 // cxsrv.de
 D(
   "cxsrv.de",
-  DnsProvider(cloudflare),
   REG_CHANGEME,
+  DnsProvider(cloudflare),
   DEFAULT,
   MAIL01,
 
@@ -104,8 +104,8 @@ D(
 // rsmg-clan.de
 D(
   "rsmg-clan.de",
-  DnsProvider(cloudflare),
   REG_CHANGEME,
+  DnsProvider(cloudflare),
   DEFAULT,
   MAIL01,
 
