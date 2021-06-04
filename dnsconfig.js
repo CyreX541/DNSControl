@@ -16,10 +16,6 @@ var DEFAULT = [
     issue: ["letsencrypt.org"],
     issuewild: ["letsencrypt.org"],
   }),
-
-  // Defaultconf
-  DnsProvider(cloudflare),
-  REG_CHANGEME,
 ];
 
 var MAIL01 = [
@@ -68,6 +64,8 @@ var MAIL01 = [
 // cxsrv.de
 D(
   "cxsrv.de",
+  DnsProvider(cloudflare),
+  REG_CHANGEME,
   DEFAULT,
   MAIL01,
 
@@ -106,6 +104,8 @@ D(
 // rsmg-clan.de
 D(
   "rsmg-clan.de",
+  DnsProvider(cloudflare),
+  REG_CHANGEME,
   DEFAULT,
   MAIL01,
 
