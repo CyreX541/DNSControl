@@ -2,7 +2,6 @@ var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
 var REG_CHANGEME = NewRegistrar("ThirdParty", "NONE");
 
 var DEFAULT = [
-
   // CAA
   CAA_BUILDER({
     label: "*",
@@ -19,7 +18,6 @@ var DEFAULT = [
 ];
 
 var MAIL01 = [
-
   // CNAME
   CNAME("autoconfig", "mail.cxsrv.de."),
   CNAME("autodiscover", "mail.cxsrv.de."),
@@ -56,7 +54,7 @@ var MAIL01 = [
   TXT(
     "_dmarc",
     "v=DMARC1; p=quarantine; rua=mailto:dmarc@fhsrv.de; ruf=mailto:dmarc@fhsrv.de; fo=1;"
-  )
+  ),
 ];
 
 // Domains - Backend
