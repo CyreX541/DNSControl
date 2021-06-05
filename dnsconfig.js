@@ -1,7 +1,7 @@
 var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
 var REG_CHANGEME = NewRegistrar("ThirdParty", "NONE");
 
-var DEFAULT = [
+DEFAULTS(
   // CAA
   CAA_BUILDER({
     label: "*",
@@ -18,7 +18,7 @@ var DEFAULT = [
 
   // DNS Provider
   DnsProvider(cloudflare),
-];
+);
 
 var MAIL01 = [
   // CNAME
@@ -66,7 +66,6 @@ var MAIL01 = [
 D(
   "cxsrv.de",
   REG_CHANGEME,
-  DEFAULT,
   MAIL01,
 
   // A
@@ -105,7 +104,6 @@ D(
 D(
   "rsmg-clan.de",
   REG_CHANGEME,
-  DEFAULT,
   MAIL01,
 
   // CNAME
