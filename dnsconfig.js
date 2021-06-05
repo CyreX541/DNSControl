@@ -17,7 +17,7 @@ DEFAULTS(
   }),
 
   // DNS Provider
-  DnsProvider(cloudflare),
+  DnsProvider(cloudflare)
 );
 
 var MAIL01 = [
