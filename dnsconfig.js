@@ -26,14 +26,12 @@ var MAIL01 = [
   // DMARC
   DMARC_BUILDER({
     policy: "reject",
-    ruf: ["mailto:reports@dmarc.fhsrv.de"],
-    rua: ["mailto:reports@dmarc.fhsrv.de"],
     failureOptions: "1",
   }),
 
   // MTA-STS
   CNAME("mta-sts", "mail.cxsrv.de."),
-  TXT("_mta-sts", "v=STSv1; id=20160831085700Z"),
+  TXT("_mta-sts", "v=STSv1; id=20220404182000Z"),
   TXT("_smtp._tls", "v=TLSRPTv1; rua=mailto:admin@cxsrv.de"),
 
   // MX
