@@ -1,4 +1,4 @@
-var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
+var cloudflare = NewDnsProvider("cloudflare");
 var REGISTRAR = NewRegistrar("ThirdParty", "NONE");
 
 DEFAULTS(
