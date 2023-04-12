@@ -6,7 +6,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.1
 
       - name: DNSControl check
         uses: koenrh/dnscontrol-action@v3.27.1
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: check
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.1
 
       - name: DNSControl preview
         id: dnscontrol_preview
