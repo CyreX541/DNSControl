@@ -23,6 +23,7 @@ jobs:
         id: dnscontrol_preview
         uses: koenrh/dnscontrol-action@v3.31.4
         env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         with:
           args: preview
@@ -34,6 +35,6 @@ jobs:
         with:
           msg: |
             ```
-            ${{ steps.dnscontrol_preview.outputs.preview_comment }}
+            ${{ steps.dnscontrol_preview.outputs.output }}
             ```
           check_for_duplicate_msg: true
