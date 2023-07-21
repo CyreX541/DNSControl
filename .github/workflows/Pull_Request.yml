@@ -34,6 +34,6 @@ jobs:
         with:
           msg: |
             ```
-            ${{ steps.dnscontrol_preview.outputs.preview_comment }}
+            ${{ steps.dnscontrol_preview.outputs.output }}
             ```
           check_for_duplicate_msg: true
