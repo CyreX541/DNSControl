@@ -14,7 +14,7 @@ DEFAULTS(
     issue: ["letsencrypt.org"],
     issuewild: ["letsencrypt.org"],
   }),
-  DnsProvider(cloudflare),
+  DnsProvider(cloudflare)
 );
 
 var MAIL01 = [
@@ -94,14 +94,14 @@ D(
     3,
     1,
     1,
-    "c80ba3bc63c45fb4d78316a103831ef3b3b995b157696c27282f256b5eca5364",
+    "c80ba3bc63c45fb4d78316a103831ef3b3b995b157696c27282f256b5eca5364"
   ),
 
   // TXT
   TXT(
     "dkim._domainkey",
-    "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB",
-  ),
+    "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB"
+  )
 );
 
 // Domains - Projekte
@@ -135,6 +135,6 @@ D(
   // TXT
   TXT(
     "dkim._domainkey",
-    "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Z7Kra9m/OBpeKxu4HVadFEGDMO97vjF4sxgcjhat3lxk4qyXDCXNIpMcwpjIfYc0vWSrDpkwasSuQpSWarHZy76eCpFlGME0U02LmDb/TsQxO+5gqZduW2bqiYr6red3PT5P71Vmh8QALWw52L2CZqGW0vuMwTrNbUdix2tgRLTGUrukGu8XegLA70r1xowI5EXwA3USEkmTZPezaBHa084bNyI0v/V91Cz1ixRYnOW9iUzhWUwUH4mwTOHs6yiPBcY8ystA+7cxe7jaezEYjvfoP48uHP9yLQDhLBt9EaY7mVKW8FUbwA2awZbIexOGC/XCwZ4f24ASgwsgTfkWQIDAQAB",
-  ),
+    "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Z7Kra9m/OBpeKxu4HVadFEGDMO97vjF4sxgcjhat3lxk4qyXDCXNIpMcwpjIfYc0vWSrDpkwasSuQpSWarHZy76eCpFlGME0U02LmDb/TsQxO+5gqZduW2bqiYr6red3PT5P71Vmh8QALWw52L2CZqGW0vuMwTrNbUdix2tgRLTGUrukGu8XegLA70r1xowI5EXwA3USEkmTZPezaBHa084bNyI0v/V91Cz1ixRYnOW9iUzhWUwUH4mwTOHs6yiPBcY8ystA+7cxe7jaezEYjvfoP48uHP9yLQDhLBt9EaY7mVKW8FUbwA2awZbIexOGC/XCwZ4f24ASgwsgTfkWQIDAQAB"
+  )
 );
