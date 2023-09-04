@@ -80,10 +80,6 @@ D(
   A("data", "89.116.30.233"),
   AAAA("data", "2a02:c206:3010:8868::1"),
 
-  // FSN1-DC14 / LIB
-  A("lib", "5.75.254.213"),
-  AAAA("lib", "2a01:4f8:c012:f4f4::1"),
-
   // FSN1-DC14 - Mail
   A("mail", "159.69.249.205"),
   AAAA("mail", "2a01:4f8:1c17:df7a::1"),
@@ -124,9 +120,6 @@ D(
   // CNAME - DATA | GAMES
   CNAME("amongus", "data.cxsrv.de."),
   CNAME("mc", "data.cxsrv.de."),
-
-  // CNAME - LIB
-  CNAME("lib", "lib.cxsrv.de."),
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
