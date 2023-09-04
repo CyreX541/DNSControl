@@ -1,21 +1,19 @@
 var cloudflare = NewDnsProvider("cloudflare");
 var REGISTRAR = NewRegistrar("ThirdParty");
 
-DEFAULTS(
-  CAA_BUILDER({
-    label: "*",
-    iodef: "mailto:admin@cxsrv.de",
-    issue: ["letsencrypt.org"],
-    issuewild: ["letsencrypt.org"],
-  }),
-  CAA_BUILDER({
-    label: "@",
-    iodef: "mailto:admin@cxsrv.de",
-    issue: ["letsencrypt.org"],
-    issuewild: ["letsencrypt.org"],
-  }),
-  DnsProvider(cloudflare)
-);
+DEFAULTS(CAA_BUILDER({
+           label : "*",
+           iodef : "mailto:admin@cxsrv.de",
+           issue : [ "letsencrypt.org" ],
+           issuewild : [ "letsencrypt.org" ],
+         }),
+         CAA_BUILDER({
+           label : "@",
+           iodef : "mailto:admin@cxsrv.de",
+           issue : [ "letsencrypt.org" ],
+           issuewild : [ "letsencrypt.org" ],
+         }),
+         DnsProvider(cloudflare));
 
 var MAIL01 = [
   // CNAME
@@ -25,8 +23,8 @@ var MAIL01 = [
 
   // DMARC
   DMARC_BUILDER({
-    policy: "reject",
-    failureOptions: "1",
+    policy : "reject",
+    failureOptions : "1",
   }),
 
   // MTA-STS
@@ -39,12 +37,12 @@ var MAIL01 = [
 
   // SPF
   SPF_BUILDER({
-    label: "@",
-    parts: ["v=spf1", "mx", "-all"],
+    label : "@",
+    parts : [ "v=spf1", "mx", "-all" ],
   }),
   SPF_BUILDER({
-    label: "*",
-    parts: ["v=spf1", "mx", "-all"],
+    label : "*",
+    parts : [ "v=spf1", "mx", "-all" ],
   }),
 
   // SRV
@@ -67,74 +65,50 @@ var MAIL01 = [
 // Domains - Backend
 
 // cxsrv.de
-D(
-  "cxsrv.de",
-  REGISTRAR,
-  MAIL01,
+D("cxsrv.de", REGISTRAR, MAIL01,
 
   // FSN1-DC10 / FSN1-DC12 - Backup
-  A("backup", "148.251.152.30"),
-  AAAA("backup", "2a01:4f8:210:5126::1"),
+  A("backup", "148.251.152.30"), AAAA("backup", "2a01:4f8:210:5126::1"),
 
   // DUS1 - DATA
-  A("data", "89.116.30.233"),
-  AAAA("data", "2a02:c206:3010:8868::1"),
+  A("data", "89.116.30.233"), AAAA("data", "2a02:c206:3010:8868::1"),
 
   // FSN1-DC14 - Mail
-  A("mail", "159.69.249.205"),
-  AAAA("mail", "2a01:4f8:1c17:df7a::1"),
+  A("mail", "159.69.249.205"), AAAA("mail", "2a01:4f8:1c17:df7a::1"),
 
   // NGB1-DC3 - VOICE
-  A("voice", "49.12.205.237"),
-  AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
+  A("voice", "49.12.205.237"), AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
 
   // TLSA
-  TLSA(
-    "_25._tcp.mail",
-    3,
-    1,
-    1,
-    "c80ba3bc63c45fb4d78316a103831ef3b3b995b157696c27282f256b5eca5364"
-  ),
+  TLSA("_25._tcp.mail", 3, 1, 1,
+       "c80ba3bc63c45fb4d78316a103831ef3b3b995b157696c27282f256b5eca5364"),
 
   // TXT
-  TXT(
-    "dkim._domainkey",
-    "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB"
-  )
-);
+  TXT("dkim._domainkey",
+      "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB"));
 
 // Domains - Projekte
 
 // rsmg-clan.de
-D(
-  "rsmg-clan.de",
-  REGISTRAR,
-  MAIL01,
+D("rsmg-clan.de", REGISTRAR, MAIL01,
 
   // CNAME - DATA
-  CNAME("cloud", "data.cxsrv.de."),
-  CNAME("git", "data.cxsrv.de."),
+  CNAME("cloud", "data.cxsrv.de."), CNAME("git", "data.cxsrv.de."),
   CNAME("vpn", "data.cxsrv.de."),
 
   // CNAME - DATA | GAMES
-  CNAME("amongus", "data.cxsrv.de."),
-  CNAME("mc", "data.cxsrv.de."),
+  CNAME("amongus", "data.cxsrv.de."), CNAME("mc", "data.cxsrv.de."),
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
 
   // CNAME - VOICE
-  CNAME("bw", "voice.cxsrv.de."),
-  CNAME("music", "voice.cxsrv.de."),
+  CNAME("bw", "voice.cxsrv.de."), CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
 
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
 
   // TXT
-  TXT(
-    "dkim._domainkey",
-    "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Z7Kra9m/OBpeKxu4HVadFEGDMO97vjF4sxgcjhat3lxk4qyXDCXNIpMcwpjIfYc0vWSrDpkwasSuQpSWarHZy76eCpFlGME0U02LmDb/TsQxO+5gqZduW2bqiYr6red3PT5P71Vmh8QALWw52L2CZqGW0vuMwTrNbUdix2tgRLTGUrukGu8XegLA70r1xowI5EXwA3USEkmTZPezaBHa084bNyI0v/V91Cz1ixRYnOW9iUzhWUwUH4mwTOHs6yiPBcY8ystA+7cxe7jaezEYjvfoP48uHP9yLQDhLBt9EaY7mVKW8FUbwA2awZbIexOGC/XCwZ4f24ASgwsgTfkWQIDAQAB"
-  )
-);
+  TXT("dkim._domainkey",
+      "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Z7Kra9m/OBpeKxu4HVadFEGDMO97vjF4sxgcjhat3lxk4qyXDCXNIpMcwpjIfYc0vWSrDpkwasSuQpSWarHZy76eCpFlGME0U02LmDb/TsQxO+5gqZduW2bqiYr6red3PT5P71Vmh8QALWw52L2CZqGW0vuMwTrNbUdix2tgRLTGUrukGu8XegLA70r1xowI5EXwA3USEkmTZPezaBHa084bNyI0v/V91Cz1ixRYnOW9iUzhWUwUH4mwTOHs6yiPBcY8ystA+7cxe7jaezEYjvfoP48uHP9yLQDhLBt9EaY7mVKW8FUbwA2awZbIexOGC/XCwZ4f24ASgwsgTfkWQIDAQAB"));
