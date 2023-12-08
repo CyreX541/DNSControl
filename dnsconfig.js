@@ -72,10 +72,6 @@ D(
   REGISTRAR,
   MAIL01,
 
-  // FSN1-DC10 / FSN1-DC12 - Backup
-  A("backup", "148.251.152.30"),
-  AAAA("backup", "2a01:4f8:210:5126::1"),
-
   // DUS1 - DATA
   A("data", "89.116.30.233"),
   AAAA("data", "2a02:c206:3010:8868::1"),
