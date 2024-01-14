@@ -25,13 +25,12 @@ var MAIL01 = [
 
   // DMARC
   DMARC_BUILDER({
-    policy: "reject",
-    subdomainPolicy: "reject",
     alignmentSPF: "strict",
     alignmentDKIM: "strict",
     failureOptions: "1",
-    percent: "100",
+    policy: "reject",
     ruf: "admin@cxsrv.de",
+    subdomainPolicy: "reject",
   }),
 
   // MTA-STS
