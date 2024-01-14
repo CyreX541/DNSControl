@@ -29,9 +29,17 @@ var MAIL01 = [
     alignmentDKIM: "strict",
     failureOptions: "1",
     policy: "reject",
-    ruf: "admin@cxsrv.de",
-    subdomainPolicy: "reject",
   }),
+
+  // DMARC
+  //DMARC_BUILDER({
+  //  alignmentSPF: "strict",
+  //  alignmentDKIM: "strict",
+  //  failureOptions: "1",
+  //  policy: "reject",
+  //  ruf: "admin@cxsrv.de",
+  //  subdomainPolicy: "reject",
+  //}),
 
   // MTA-STS
   CNAME("mta-sts", "mail.cxsrv.de."),
