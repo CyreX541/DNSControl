@@ -102,6 +102,7 @@ D(
   ),
 
   // TXT
+  TXT("rsmg-clan.de._report._dmarc.cxsrv.de","v=DMARC1;"),
   TXT(
     "dkim._domainkey",
     "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB"
