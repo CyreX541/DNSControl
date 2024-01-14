@@ -29,6 +29,8 @@ var MAIL01 = [
     alignmentDKIM: "strict",
     failureOptions: "1",
     policy: "reject",
+    ruf: ["mailto:admin@cxsrv.de"],
+    subdomainPolicy: "reject",
   }),
 
   // DMARC
