@@ -84,6 +84,10 @@ D(
   A("mail", "159.69.249.205"),
   AAAA("mail", "2a01:4f8:1c17:df7a::1"),
 
+  // NBG - NC - Status
+  A("status", "192.145.47.148"),
+  AAAA("status", "2a03:4000:42:20f::1"),
+
   // NGB1-DC3 - VOICE
   A("voice", "49.12.205.237"),
   AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
