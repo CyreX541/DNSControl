@@ -119,6 +119,7 @@ D(
 
   // CNAME - DATA
   CNAME("cloud", "data.cxsrv.de."),
+  CNAME("jelly", "data.cxsrv.de."),
   CNAME("git", "data.cxsrv.de."),
   CNAME("vpn", "data.cxsrv.de."),
 
