@@ -12,13 +12,8 @@ jobs:
       - uses: actions/checkout@v4.1.7
 
       - name: DNSControl push
-        uses: koenrh/dnscontrol-action@v3.31.4
+        uses: Jniklas2/DNSControl-Action@v4.12.5
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         with:
           args: push
-
-          # Optionally, if your DNSConfig files are in a non-default location,
-          # you could specify the paths to the config and credentials file.
-          config_file: 'dnsconfig.js'
-          creds_file: 'creds.json'
