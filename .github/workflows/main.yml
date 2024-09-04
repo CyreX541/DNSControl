@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4.1.7
 
       - name: DNSControl push
-        uses: Jniklas2/DNSControl-Action@v4.12.5
+        uses: Jniklas2/DNSControl-Action@v4.13.0
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         with:
