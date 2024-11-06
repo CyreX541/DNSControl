@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4.2.2
 
       - name: DNSControl check
-        uses: Jniklas2/DNSControl-Action@v4.14.1
+        uses: Jniklas2/DNSControl-Action@v4.14.2
         with:
           args: check
 
@@ -21,7 +21,7 @@ jobs:
 
       - name: DNSControl preview
         id: dnscontrol_preview
-        uses: Jniklas2/DNSControl-Action@v4.14.1
+        uses: Jniklas2/DNSControl-Action@v4.14.2
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         with:
