@@ -80,6 +80,10 @@ D(
   A("data", "89.116.30.233"),
   AAAA("data", "2a02:c206:3010:8868::1"),
 
+  // DUS1 - DATA02
+  A("data02", "38.242.148.247"),
+  AAAA("data02", "2a02:c206:3015:5126::1"),
+
   // FSN1-DC14 - MAIL
   A("mail", "159.69.249.205"),
   AAAA("mail", "2a01:4f8:1c17:df7a::1"),
@@ -115,7 +119,6 @@ D(
 
   // CNAME - DATA
   CNAME("cloud", "data.cxsrv.de."),
-  CNAME("jelly", "data.cxsrv.de."),
   CNAME("git", "data.cxsrv.de."),
   CNAME("vpn", "data.cxsrv.de."),
 
