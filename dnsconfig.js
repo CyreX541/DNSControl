@@ -115,11 +115,9 @@ D(
 
   // CNAME - DATA02
   CNAME("cloud", "data02.cxsrv.de."),
-  CNAME("git", "data02.cxsrv.de."),
   CNAME("vpn", "data02.cxsrv.de."),
 
   // CNAME - DATA02 | GAMES
-  CNAME("amongus", "data02.cxsrv.de."),
   CNAME("mc", "data02.cxsrv.de."),
 
   // CNAME - MAIL
