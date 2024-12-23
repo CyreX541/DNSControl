@@ -76,10 +76,6 @@ D(
   REGISTRAR,
   MAIL01,
 
-  // DUS1 - DATA
-  A("data", "89.116.30.233"),
-  AAAA("data", "2a02:c206:3010:8868::1"),
-
   // DUS1 - DATA02
   A("data02", "38.242.148.247"),
   AAAA("data02", "2a02:c206:3015:5126::1"),
@@ -119,11 +115,9 @@ D(
 
   // CNAME - DATA02
   CNAME("cloud", "data02.cxsrv.de."),
-  CNAME("git", "data02.cxsrv.de."),
   CNAME("vpn", "data02.cxsrv.de."),
 
   // CNAME - DATA02 | GAMES
-  CNAME("amongus", "data02.cxsrv.de."),
   CNAME("mc", "data02.cxsrv.de."),
 
   // CNAME - MAIL
