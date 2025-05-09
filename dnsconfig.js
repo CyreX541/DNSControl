@@ -121,6 +121,9 @@ D(
   REGISTRAR,
   MAIL01,
 
+  // CNAME - BS02
+  CNAME("bs02", "bs02.cxsrv.de."),
+
   // CNAME - DATA02
   CNAME("cloud", "data02.cxsrv.de."),
   CNAME("vpn", "data02.cxsrv.de."),
