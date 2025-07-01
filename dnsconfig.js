@@ -133,7 +133,7 @@ D(
 
   // CNAME - DATA02
   CNAME("cloud", "data02.cxsrv.de."),
-  CNAME("docs01","data02.cxsrv.de."),
+  CNAME("notes","data02.cxsrv.de."),
   CNAME("grolschner", "data02.cxsrv.de."),
   CNAME("vpn", "data02.cxsrv.de."),
 
