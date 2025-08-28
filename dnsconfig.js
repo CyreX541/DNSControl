@@ -76,6 +76,10 @@ D(
   REGISTRAR,
   MAIL01,
 
+  // NBG - BS01
+  A("bs01","152.53.204.169"),
+  AAAA("bs01","2a00:11c0:5f:3c0e::1"),
+
   // NBG - BS02
   A("bs02", "185.162.251.165"),
   AAAA("bs02", "2a03:4000:1a:9ba::1"),
@@ -120,6 +124,9 @@ D(
   "rsmg-clan.de",
   REGISTRAR,
   MAIL01,
+
+  // CNAME - BS01
+  CNAME("bs01","bs01.cxsrv.de."),
 
   // CNAME - BS02
   CNAME("bs02", "bs02.cxsrv.de."),
