@@ -80,11 +80,7 @@ D(
   A("bs01","152.53.204.169"),
   AAAA("bs01","2a00:11c0:5f:3c0e::1"),
 
-  // NBG - BS02
-  A("bs02", "185.162.251.165"),
-  AAAA("bs02", "2a03:4000:1a:9ba::1"),
-
-  // DUS1 - DATA02
+  // LOU1 - DATA02
   A("data02", "38.242.148.247"),
   AAAA("data02", "2a02:c206:3015:5126::1"),
 
@@ -127,9 +123,6 @@ D(
 
   // CNAME - BS01
   CNAME("bs01","bs01.cxsrv.de."),
-
-  // CNAME - BS02
-  CNAME("bs02", "bs02.cxsrv.de."),
 
   // CNAME - DATA02
   CNAME("cloud", "data02.cxsrv.de."),
