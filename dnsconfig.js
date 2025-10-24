@@ -97,6 +97,16 @@ D(
     subdomainPolicy: "reject",
   }),
 
+  // DKIM
+  DKIM_BUILDER({
+    label: "@",
+    selector: "dkim",
+    pubkey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB",
+    flags: ["s"], // s -> strict, y -> for testing without rejection
+    keytype: 'rsa',
+    servicetypes: ['email']
+  }),
+
   // TLSA
   TLSA(
     "_25._tcp.mail",
@@ -105,12 +115,6 @@ D(
     1,
     "c80ba3bc63c45fb4d78316a103831ef3b3b995b157696c27282f256b5eca5364"
   ),
-
-  // TXT
-  TXT(
-    "dkim._domainkey",
-    "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB"
-  )
 );
 
 // Domains - Projekte
