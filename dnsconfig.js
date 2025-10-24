@@ -92,6 +92,7 @@ D(
     alignmentDKIM: "strict",
     failureOptions: "1",
     policy: "reject",
+    rua: ["mailto:f58881bb5f0244b19afb53071d37440b@dmarc-reports.cloudflare.net"],
     ruf: ["mailto:admin@cxsrv.de"],
     subdomainPolicy: "reject",
   }),
