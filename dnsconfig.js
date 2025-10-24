@@ -96,16 +96,6 @@ D(
   A("voice", "49.12.205.237"),
   AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
 
-  // DKIM
-  DKIM_BUILDER({
-    label: "@",
-    selector: "dkim",
-    pubkey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB",
-    flags: ['s'], // s -> strict, y -> for testing without rejection
-    keytype: 'rsa',
-    servicetypes: ['email'],
-  }),
-
   // TLSA
   TLSA(
     "_25._tcp.mail",
@@ -117,6 +107,10 @@ D(
 
   // TXT
   TXT("rsmg-clan.de._report._dmarc","v=DMARC1;"),
+  TXT(
+    "dkim._domainkey",
+    "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5BmnzgIW7nXALIhYQn0RoNodFy56R7RUPrrDaGSMkurXkbSmnTr5TApMHO5ujxR+i3Jq5S76nMKzlWt37V8c0uKViybahslI6eHt5zHa66JOigvF34cBSHZzolOCoPNCAAo10zmrbelIisa+0+PCU0VCrYuVxKzNXL9nOakZL2Pjzpsjdi9TL8av77wcdzm2YdLXcvDJ7oqPYNqLipYk34ipfUbrgXqi/98Pvgn9rYS02n+9AWAurkJ8ifIjRqfnUst2jFSFNhdWBpFpvfY3G1wy4dXYUijjI9Dl2NlLYQBmrQZZtPxa2k0O3WtZ8KXJHBJG0PP1876AVpxadqUYhQIDAQAB"
+  )
 );
 
 // Domains - Projekte
@@ -153,9 +147,9 @@ D(
     pubkey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Z7Kra9m/OBpeKxu4HVadFEGDMO97vjF4sxgcjhat3lxk4qyXDCXNIpMcwpjIfYc0vWSrDpkwasSuQpSWarHZy76eCpFlGME0U02LmDb/TsQxO+5gqZduW2bqiYr6red3PT5P71Vmh8QALWw52L2CZqGW0vuMwTrNbUdix2tgRLTGUrukGu8XegLA70r1xowI5EXwA3USEkmTZPezaBHa084bNyI0v/V91Cz1ixRYnOW9iUzhWUwUH4mwTOHs6yiPBcY8ystA+7cxe7jaezEYjvfoP48uHP9yLQDhLBt9EaY7mVKW8FUbwA2awZbIexOGC/XCwZ4f24ASgwsgTfkWQIDAQAB",
     flags: ['s'], // s -> strict, y -> for testing without rejection
     keytype: 'rsa',
-    servicetypes: ['email'],
+    servicetypes: ['email']
   }),
-
+  
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
 );
