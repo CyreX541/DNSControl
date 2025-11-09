@@ -70,10 +70,6 @@ D(
   A("bs01","152.53.204.169"),
   AAAA("bs01","2a00:11c0:5f:3c0e::1"),
 
-  // FNS1 - DC14 - Data01
-  A("data01","23.88.127.19"),
-  AAAA("data01","2a01:4f8:c010:94b1::1"),
-
   // LOU1 - DATA02
   A("data02", "38.242.148.247"),
   AAAA("data02", "2a02:c206:3015:5126::1"),
@@ -132,10 +128,6 @@ D(
   // CNAME - BS01
   CNAME("bs01","bs01.cxsrv.de."),
 
-  // CNAME - Data01
-  CNAME("notes", "data01.cxsrv.de."),
-  CNAME("vpn", "data01.cxsrv.de."),
-
   // CNAME - DATA02
   CNAME("cloud", "data02.cxsrv.de."),
   CNAME("grolschner", "data02.cxsrv.de."),
@@ -150,6 +142,7 @@ D(
   CNAME("bw", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
+  CNAME("gate", "data01.cxsrv.de."),
 
   // DKIM
   DKIM_BUILDER({
