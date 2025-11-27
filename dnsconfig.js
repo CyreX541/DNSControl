@@ -131,13 +131,15 @@ D(
   // CNAME - DATA02
   CNAME("cloud", "data02.cxsrv.de."),
   CNAME("grolschner", "data02.cxsrv.de."),
-  CNAME("notes", "data02.cxsrv.de."),
 
   // CNAME - DATA02 | GAMES
   CNAME("mc", "data02.cxsrv.de."),
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
+
+  // CNAME - MGR02
+  CNAME("status", "mgr02.cxsrv.de."),
 
   // CNAME - VOICE
   CNAME("bw", "voice.cxsrv.de."),
