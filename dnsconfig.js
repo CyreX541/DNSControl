@@ -78,6 +78,10 @@ D(
   A("mail", "159.69.249.205"),
   AAAA("mail", "2a01:4f8:1c17:df7a::1"),
 
+  // FSN1-DC14 - MGR01
+  A("mgr01", "91.99.1.151"),
+  AAAA("mgr01", "2a01:4f8:c012:2ea3::1"),
+
   // FRA - MGR02
   A("mgr02", "5.175.249.115"),
   AAAA("mgr02", "2a0f:5707:aaf1:f786::1"),
@@ -137,6 +141,9 @@ D(
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
+
+  // CNAME - MGR01
+  CNAME("headscale", "mgr01.cxsrv.de."),
 
   // CNAME - MGR02
   CNAME("status", "mgr02.cxsrv.de."),
