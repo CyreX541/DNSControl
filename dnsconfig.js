@@ -143,7 +143,7 @@ D(
   CNAME("mail", "mail.cxsrv.de."),
 
   // CNAME - MGR01
-  CNAME("hcs", "mgr01.cxsrv.de."),
+  CNAME("hsc", "mgr01.cxsrv.de."),
 
   // CNAME - MGR02
   CNAME("status", "mgr02.cxsrv.de."),
