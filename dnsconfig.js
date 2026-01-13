@@ -167,9 +167,13 @@ D(
     subdomainPolicy: "reject",
   }),
 
-  // HSNET
+  // HSNET - AdGuard
   A("adguard.hsnet", "100.64.0.5"),
   AAAA("adguard.hsnet","fd7a:115c:a1e0::5"),
+
+  // HSNET - BW
+  A("bw.hsnet","100.64.0.7"),
+  AAAA("bw.hsnet","fd7a:115c:a1e0::7"),
 
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
