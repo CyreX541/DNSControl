@@ -9,7 +9,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@v6.0.2
 
       - name: Check DNS configuration
         uses: Jniklas2/DNSControl-Action@v4.31.1
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: check
     steps:
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@v6.0.2
       - name: Push DNS changes
         uses: Jniklas2/DNSControl-Action@v4.31.1
         env:
