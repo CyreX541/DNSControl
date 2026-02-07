@@ -138,7 +138,6 @@ D(
   CNAME("mail", "mail.cxsrv.de."),
 
   // CNAME - VOICE
-  CNAME("bw", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
   CNAME("gate", "voice.cxsrv.de."),
@@ -164,14 +163,21 @@ D(
     subdomainPolicy: "reject",
   }),
 
-  // HSNET - AdGuard
-  A("adguard.hsnet", "100.64.0.5"),
-  AAAA("adguard.hsnet","fd7a:115c:a1e0::5"),
-
-  // HSNET - BW
-  A("bw.hsnet","100.64.0.7"),
-  AAAA("bw.hsnet","fd7a:115c:a1e0::7"),
-
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
+);
+
+// Domains - VPN
+
+// hsnet.rsmg-clan.de
+D_EXTEND(
+  "hsnet.rsmg-clan.de",
+
+  // HSNET - AdGuard
+  A("adguard", "100.64.0.5"),
+  AAAA("adguard","fd7a:115c:a1e0::5"),
+
+  // HSNET - BW
+  A("bw","100.64.0.7"),
+  AAAA("bw","fd7a:115c:a1e0::7"),
 );
