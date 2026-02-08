@@ -125,7 +125,7 @@ D(
   MAIL01,
 
   // CNAME - BS01
-  CNAME("bs","bs01.cxsrv.de."),
+  CNAME("bs","bs02.cxsrv.de."),
 
   // CNAME - DATA02
   CNAME("cloud", "data02.cxsrv.de."),
