@@ -66,11 +66,7 @@ D(
   REGISTRAR,
   MAIL01,
 
-  // NBG - BS01
-  A("bs01","152.53.204.169"),
-  AAAA("bs01","2a00:11c0:5f:3c0e::1"),
-
-  // FFM/EYG - BS02
+  // EYG - BS02
   A("bs02", "45.156.85.191"),
 
   // LOU1 - DATA02
