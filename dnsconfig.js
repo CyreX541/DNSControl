@@ -162,18 +162,3 @@ D(
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
 );
-
-// Domains - VPN
-
-// hsnet.rsmg-clan.de
-D_EXTEND(
-  "hsnet.rsmg-clan.de",
-
-  // HSNET - AdGuard
-  A("adguard", "100.64.0.5"),
-  AAAA("adguard","fd7a:115c:a1e0::5"),
-
-  // HSNET - BW
-  A("bw","100.64.0.7"),
-  AAAA("bw","fd7a:115c:a1e0::7"),
-);
