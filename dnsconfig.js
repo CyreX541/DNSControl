@@ -66,11 +66,7 @@ D(
   REGISTRAR,
   MAIL01,
 
-  // NBG - BS01
-  A("bs01","152.53.204.169"),
-  AAAA("bs01","2a00:11c0:5f:3c0e::1"),
-
-  // FFM/EYG - BS02
+  // EYG - BS02
   A("bs02", "45.156.85.191"),
 
   // LOU1 - DATA02
@@ -165,19 +161,4 @@ D(
 
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
-);
-
-// Domains - VPN
-
-// hsnet.rsmg-clan.de
-D_EXTEND(
-  "hsnet.rsmg-clan.de",
-
-  // HSNET - AdGuard
-  A("adguard", "100.64.0.5"),
-  AAAA("adguard","fd7a:115c:a1e0::5"),
-
-  // HSNET - BW
-  A("bw","100.64.0.7"),
-  AAAA("bw","fd7a:115c:a1e0::7"),
 );
