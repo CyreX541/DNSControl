@@ -137,9 +137,7 @@ D(
   CNAME("mail", "mail.cxsrv.de."),
 
   // CNAME - VOICE
-  CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
-  CNAME("gate", "voice.cxsrv.de."),
 
   // DKIM
   DKIM_BUILDER({
