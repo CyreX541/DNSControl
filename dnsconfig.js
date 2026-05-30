@@ -137,6 +137,7 @@ D(
   CNAME("mail", "mail.cxsrv.de."),
 
   // CNAME - VOICE
+  CNAME("bw", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
   CNAME("wiki", "voice.cxsrv.de."),
 
