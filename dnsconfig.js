@@ -139,6 +139,7 @@ D(
   // CNAME - VOICE
   CNAME("bw", "voice.cxsrv.de."),
   CNAME("notes", "voice.cxsrv.de."),
+  CNAME("ts", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
 
   // DKIM
@@ -163,5 +164,6 @@ D(
   }),
 
   // SRV
+  SRV("_ts3._udp.ts", 1, 1, 9987, "voice.cxsrv.de."),
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
 );
