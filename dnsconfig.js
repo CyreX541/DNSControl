@@ -80,9 +80,9 @@ D(
   A("mail", "159.69.249.205"),
   AAAA("mail", "2a01:4f8:1c17:df7a::1"),
 
-  // NGB1-DC3 - VOICE
-  A("voice", "49.12.205.237"),
-  AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
+  // NGB1-DC3 - TOOLS01
+  A("tools01", "49.12.205.237"),
+  AAAA("tools01", "2a01:4f8:c2c:1ab0::1"),
 
   // DMARC
   DMARC_BUILDER({
@@ -136,11 +136,11 @@ D(
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
 
-  // CNAME - VOICE
-  CNAME("bw", "voice.cxsrv.de."),
-  CNAME("notes", "voice.cxsrv.de."),
-  CNAME("ts", "voice.cxsrv.de."),
-  CNAME("ts3", "voice.cxsrv.de."),
+  // CNAME - TOOLS01
+  CNAME("bw", "tools01.cxsrv.de."),
+  CNAME("notes", "tools01.cxsrv.de."),
+  CNAME("ts", "tools01.cxsrv.de."),
+  CNAME("ts3", "tools01.cxsrv.de."),
 
   // DKIM
   DKIM_BUILDER({
