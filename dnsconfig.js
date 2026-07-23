@@ -164,7 +164,7 @@ D(
   }),
 
   // SRV
-  SRV("_ts3._udp.ts", 1, 1, 9987, "voice.cxsrv.de."),
-  SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
-  SRV("_ts3._udp.ts6", 1, 1, 9988, "voice.cxsrv.de."),
+  SRV("_ts3._udp.ts", 1, 1, 9987, "tools01.cxsrv.de."),
+  SRV("_ts3._udp.ts3", 1, 1, 9987, "tools01.cxsrv.de."),
+  SRV("_ts3._udp.ts6", 1, 1, 9988, "tools01.cxsrv.de."),
 );
