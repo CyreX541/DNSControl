@@ -80,10 +80,6 @@ D(
   A("mail", "159.69.249.205"),
   AAAA("mail", "2a01:4f8:1c17:df7a::1"),
 
-  // NBG - TOOLS01
-  A("tools01", "45.157.177.57"),
-  AAAA("tools01", "2a03:4000:4b:2c7::1"),
-
   // NGB1-DC3 - VOICE
   A("voice", "49.12.205.237"),
   AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
@@ -145,7 +141,6 @@ D(
   CNAME("notes", "voice.cxsrv.de."),
   CNAME("ts", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
-  CNAME("ts6", "voice.cxsrv.de."),
 
   // DKIM
   DKIM_BUILDER({
