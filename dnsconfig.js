@@ -141,11 +141,11 @@ D(
   CNAME("mail", "mail.cxsrv.de."),
 
   // CNAME - VOICE
-  CNAME("bw", "voice.cxsrv.de."),
-  CNAME("notes", "voice.cxsrv.de."),
-  CNAME("ts", "voice.cxsrv.de."),
-  CNAME("ts3", "voice.cxsrv.de."),
-  CNAME("ts6", "voice.cxsrv.de."),
+  CNAME("bw", "tools01.cxsrv.de."),
+  CNAME("notes", "tools01.cxsrv.de."),
+  CNAME("ts", "tools01.cxsrv.de."),
+  CNAME("ts3", "tools01.cxsrv.de."),
+  CNAME("ts6", "tools01.cxsrv.de."),
 
   // DKIM
   DKIM_BUILDER({
@@ -169,7 +169,7 @@ D(
   }),
 
   // SRV
-  SRV("_ts3._udp.ts", 1, 1, 9987, "voice.cxsrv.de."),
-  SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
-  SRV("_ts3._udp.ts6", 1, 1, 9988, "voice.cxsrv.de."),
+  SRV("_ts3._udp.ts", 1, 1, 9987, "tools01.cxsrv.de."),
+  SRV("_ts3._udp.ts3", 1, 1, 9987, "tools01.cxsrv.de."),
+  SRV("_ts3._udp.ts6", 1, 1, 9988, "tools01.cxsrv.de."),
 );
