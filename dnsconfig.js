@@ -134,8 +134,8 @@ D(
   CNAME("cloud", "data02.cxsrv.de."),
   CNAME("grolschner", "data02.cxsrv.de."),
 
-  // CNAME - DATA02 | GAMES
-  CNAME("mc", "data02.cxsrv.de."),
+  // CNAME | Minecraft
+  CNAME("mc", "eu8760962.g-portal.game."),
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
