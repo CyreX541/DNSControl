@@ -144,7 +144,6 @@ D(
   CNAME("bw", "tools01.cxsrv.de."),
   CNAME("notes", "tools01.cxsrv.de."),
   CNAME("ts", "tools01.cxsrv.de."),
-  CNAME("ts3", "tools01.cxsrv.de."),
 
   // DKIM
   DKIM_BUILDER({
@@ -169,6 +168,5 @@ D(
 
   // SRV
   SRV("_ts3._udp.ts", 1, 1, 9987, "tools01.cxsrv.de."),
-  SRV("_ts3._udp.ts3", 1, 1, 9987, "tools01.cxsrv.de."),
   SRV("_ts3._udp.ts6", 1, 1, 9988, "tools01.cxsrv.de."),
 );
