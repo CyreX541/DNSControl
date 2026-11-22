@@ -127,6 +127,9 @@ D(
   REGISTRAR,
   MAIL01,
 
+  // A - SpaceEngineers
+  A("space","45.146.254.127"),
+
   // CNAME - BS01
   CNAME("bs","bs02.cxsrv.de."),
 
